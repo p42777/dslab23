@@ -1,0 +1,10 @@
+{
+  "name": "dslab-remoting",
+  "version": "1.0.0",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.2",
+    "@grpc/proto-loader": "*",
+    "package.json": "^2.0.1",
+    "soap": "^0.36.0"
+  }
+}
