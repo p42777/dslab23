@@ -14,7 +14,6 @@
     <wsdl:message name="multiplyResponse">
         <wsdl:part name="return" type="xsd:int"> </wsdl:part>
     </wsdl:message>
-
     <wsdl:portType name="Calculator">
         <wsdl:operation name="add">
             <wsdl:input message="tns:add" name="add"> </wsdl:input>
@@ -25,7 +24,6 @@
             <wsdl:input message="tns:multiply" name="multiply"> </wsdl:input>
             <wsdl:output message="tns:multiplyResponse" name="multiplyResponse"> </wsdl:output>
         </wsdl:operation>
-
     </wsdl:portType>
     <wsdl:binding name="CalculatorImplServiceSoapBinding" type="tns:Calculator">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
@@ -48,12 +46,11 @@
                 <soap:body namespace="http://soap.advsd.nccu/" use="literal"/>
             </wsdl:output>
         </wsdl:operation>
-
     </wsdl:binding>
     <wsdl:service name="CalculatorImplService">
         <wsdl:port binding="tns:CalculatorImplServiceSoapBinding" name="CalculatorImplPort">
            <!-- modify the following url to be "http://localhost:8192/AddMul" -->           
-		   <soap:address location="http://localhost:8192/AddMul"/>
+		   <soap:address location="http://172.17.0.2:8192/AddMul"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
